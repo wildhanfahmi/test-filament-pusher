@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('shift_meetings', function (Blueprint $table) {
+            $table->uuid('id')->unique()->primary();
+            $table->string('prev_group');
+            $table->string('next_group');
+            $table->string('prev_shift');
+            $table->string('next_shift');
+            $table->text('notulen')->nullable();
+            $table->text('attachments')->nullable();
+            $table->boolean('is_expired')->default(false);
+            $table->timestamps();
+        });
+
+     
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('shift_meetings');
+    }
+};
