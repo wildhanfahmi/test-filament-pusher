@@ -12,7 +12,7 @@ class ShiftMeeting extends Model
     use HasUuids;
     public function participants(): HasMany
     {
-        return $this->hasMany(ParticipantShiftMeeting::class);
+        return $this->hasMany(ParticipantShiftMeeting::class, 'shiftmeeting_id');
     }
 
     protected $casts = [

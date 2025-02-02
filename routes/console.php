@@ -19,4 +19,4 @@ Schedule::call(new AddNewShiftmeeting)
 Schedule::call(new AddNewShiftmeeting)
 ->dailyAt("22:00");
 Schedule::call(new AddNewShiftmeeting)
-->dailyAt("08:50");
+->dailyAt("23:15");

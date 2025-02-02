@@ -15,8 +15,6 @@ return new class extends Migration
             $table->uuid('id')->unique()->primary();
             $table->foreignUuid('shiftmeeting_id')->constrained('shift_meetings')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->integer('point');
-            $table->timestamp('joined_at');
             $table->timestamps();
         });
     }

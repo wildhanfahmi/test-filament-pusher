@@ -57,9 +57,9 @@ class ShiftManagement
                     ],
                 "time" => [
                     
-                        "Shift Pagi" => CarbonInterval::minutes(1)->toPeriod("08:00", "15:59"),
-                        "Shift Sore" => CarbonInterval::minutes(1)->toPeriod("16:00", "21:59"),
-                        "Shift Malam" => CarbonInterval::minutes(1)->toPeriod("22:00", "07:59"),
+                        "Shift Pagi" => CarbonInterval::minutes(1)->toPeriod("08:01", "16:00"),
+                        "Shift Sore" => CarbonInterval::minutes(1)->toPeriod("16:01", "22:00"),
+                        "Shift Malam" => CarbonInterval::minutes(1)->toPeriod("22:01", "08:00"),
                     ]
             ];
 

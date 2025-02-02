@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import laravel, {refreshPaths} from 'laravel-vite-plugin';
 
 export default defineConfig({
     server:{
-        host: '192.168.1.73',
+        host: '192.168.67.198',
         port: 8000,
         
 
@@ -12,7 +12,11 @@ export default defineConfig({
         laravel({
 
             input: ['resources/css/app.css', 'resources/js/app.js'],
-            refresh: true,
+            // refresh: true
+            refresh: [
+                ...refreshPaths,
+                'app/Livewire/**',
+            ],
             
         }),
     ],
